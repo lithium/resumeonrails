@@ -1,0 +1,41 @@
+
+
+# Resume Builder ... on Rails!
+
+More than a resume, a portfolio of the self -- catered to a specific job application.
+
+
+## User Stories
+
+
+As an Owner I can...
+    update my skill set:
+        - name ("programming knowledge", "management skills")
+        - description (optional, likely bullet point summaries)
+
+    update my work history:
+        - company
+        - position
+        - start_date
+        - end_date(optional)
+        - address
+        - contact info
+        - description
+
+    update my portfolio:
+        - project name
+        - language
+        - description
+        - screenshot (optional)
+        - source links
+
+    update landing pages:
+        a landing page is an html bio section, with the ability to navigate within: Skill Set, Work History or Portfolio.
+        a landing page is either public or has a "Resume Code": a short 4 digit alphanumeric code that can be easily given in emails so as to be kept private otherwise.
+
+
+
+
+
+
+
