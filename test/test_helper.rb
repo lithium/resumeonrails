@@ -12,4 +12,8 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  def fixture_file(filename)
+    File.new("test/fixtures/#{filename}")
+  end
 end

@@ -22,4 +22,11 @@ class SampleTest < ActiveSupport::TestCase
     assert Sample.create(:name => "four", :source_url => "").valid?, "Unable to save a Sample with an empty string for source_url!"
   end
 
+  test "ensure that you can save with a screenshot" do
+    sample = Sample.new
+    sample.name = "MyORM"
+    sample.screenshot = fixture_file("screenshot.png")
+    assert sample.save, "Unable to save a Sample with a screenshot!"
+  end
+
 end
