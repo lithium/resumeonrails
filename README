@@ -30,8 +30,10 @@ As an Owner I can...
         - source links
 
     update landing pages:
-        a landing page is an html bio section, with the ability to navigate within: Skill Set, Work History or Portfolio.
-        a landing page is either public or has a "Resume Code": a short 4 digit alphanumeric code that can be easily given in emails so as to be kept private otherwise.
+        A landing page is an individual resume, likely tailored to a specific job. It contains:
+          - slug (if empty, index page)
+          - leading html blob (probably contains name/contact info)
+          - orderable has_many's of WorkHistory,Portfolio,Skill
 
 
 
