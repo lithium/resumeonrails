@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919051306) do
+ActiveRecord::Schema.define(version: 20130920024204) do
+
+  create_table "page_skill_associations", force: true do |t|
+    t.integer  "page_id"
+    t.integer  "skill_id"
+    t.integer  "position",   default: 9
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", force: true do |t|
+    t.string   "slug"
+    t.text     "header"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"

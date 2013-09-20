@@ -1,4 +1,7 @@
 class Skill < ActiveRecord::Base
+  # has_many :page_skill_associations, :dependent => :delete_all
+  # has_many :pages, :through => :page_skill_associations
+  
   default_scope { order('ordering ASC') }
 
   validates :name, uniqueness: true, presence: true
