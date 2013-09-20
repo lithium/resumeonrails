@@ -42,10 +42,11 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 
 gem 'rails_admin', "~> 0.5.0"
 
 gem "devise", "~> 3.0"
 
 gem "paperclip", "~> 3.5.1"
+
