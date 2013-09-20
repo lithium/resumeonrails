@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+ruby "2.0.0"
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'rails', '4.0.0'
+gem 'pg', '~> 0.17.0'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -43,10 +43,16 @@ end
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+gem 'sqlite3', group: [:development, :test]
 
+# rails_admin
 gem 'rails_admin', "~> 0.5.0"
-
 gem "devise", "~> 3.0"
 
+# image uploads
 gem "paperclip", "~> 3.5.1"
+
+
+# heroku
+gem 'rails_12factor', group: :production
 
