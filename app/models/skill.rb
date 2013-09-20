@@ -7,6 +7,11 @@ class Skill < ActiveRecord::Base
       field :name
       field :description, :ck_editor
     end
+
+    list do
+      fields :name
+    end
+
   end
 
 end
