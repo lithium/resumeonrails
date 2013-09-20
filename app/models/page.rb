@@ -8,6 +8,9 @@ class Page < ActiveRecord::Base
   has_many :page_work_history_associations, :dependent => :delete_all
   has_many :work_histories, :through => :page_work_history_associations
 
+  validates :slug, uniqueness: true, presence: true
+
+
   rails_admin do 
     configure :page_skill_associations do
       visible(false)
@@ -29,7 +32,6 @@ class Page < ActiveRecord::Base
     configure :work_histories do
       orderable(false)
     end
-
     edit do
       field :slug
       field :header, :ck_editor
