@@ -30,6 +30,14 @@ class Page < ActiveRecord::Base
       orderable(false)
     end
 
+    edit do
+      field :slug
+      field :header, :ck_editor
+      field :skills
+      field :samples
+      field :work_histories
+    end
+
   end
 
   def skill_ids=(ids)
