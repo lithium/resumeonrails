@@ -50,4 +50,3 @@ gem "devise", "~> 3.0"
 
 gem "paperclip", "~> 3.5.1"
 
-gem "protected_attributes", "~> 1.0.3"
