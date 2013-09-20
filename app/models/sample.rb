@@ -18,4 +18,13 @@ class Sample < ActiveRecord::Base
 
 
 
+  rails_admin do 
+    edit do
+      field :name
+      field :platform
+      field :source_url
+      field :screenshot
+      field :description, :ck_editor
+    end
+  end
 end
