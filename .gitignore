@@ -17,3 +17,7 @@
 
 # Ignore uploaded development media
 public/
+
+# Ignore local heroku files
+.env
+
