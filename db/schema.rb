@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130920045322) do
+ActiveRecord::Schema.define(version: 20130920050137) do
 
   create_table "page_sample_associations", force: true do |t|
     t.integer  "page_id"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 20130920045322) do
     t.integer  "page_id"
     t.integer  "skill_id"
     t.integer  "position",   default: 9
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "page_work_history_associations", force: true do |t|
+    t.integer  "page_id"
+    t.integer  "work_history_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

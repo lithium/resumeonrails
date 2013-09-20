@@ -5,6 +5,9 @@ class Page < ActiveRecord::Base
   has_many :page_sample_associations, :dependent => :delete_all
   has_many :samples, :through => :page_sample_associations
 
+  has_many :page_work_history_associations, :dependent => :delete_all
+  has_many :work_histories, :through => :page_work_history_associations
+
   rails_admin do 
     configure :page_skill_associations do
       visible(false)
@@ -19,6 +22,14 @@ class Page < ActiveRecord::Base
     configure :samples do
       orderable(true)
     end
+
+    configure :page_work_history_associations do
+      visible(false)
+    end
+    configure :work_histories do
+      orderable(false)
+    end
+
   end
 
   def skill_ids=(ids)
