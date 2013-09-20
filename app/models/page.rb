@@ -38,6 +38,10 @@ class Page < ActiveRecord::Base
       field :work_histories
     end
 
+    list do
+      fields :id,:slug
+    end
+
   end
 
   def skill_ids=(ids)

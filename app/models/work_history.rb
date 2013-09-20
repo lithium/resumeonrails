@@ -18,6 +18,9 @@ class WorkHistory < ActiveRecord::Base
       field :contact_info
       field :description, :ck_editor
     end
+    list do
+      fields :company,:position,:start_date,:end_date
+    end
   end
 
 end
