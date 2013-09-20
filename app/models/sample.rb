@@ -24,7 +24,11 @@ class Sample < ActiveRecord::Base
       field :platform
       field :source_url
       field :screenshot
-      field :description, :ck_editor
+      field :description
+    end
+
+    list do
+      fields :name,:platform
     end
   end
 end
