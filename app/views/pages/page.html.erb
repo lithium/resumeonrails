@@ -1,37 +1,44 @@
 
 
+
 <%= raw @current_page.header %>
 
-
+<section class="tab-pane active" id="skillset">
 <h2>Skillset</h2>
 <% @current_page.skills.each do |skill| %>
-<section class="skill">
-  <h3><%= skill.name %></h3>
-  <div class="description"><%=raw skill.description %></div>
-</section>
+  <div class="skill">
+    <h3><%= skill.name %></h3>
+    <div class="description"><%=raw skill.description %></div>
+  </div>
 <% end %>
+</section>
 
+<section class="tab-pane" id="portfolio">
 <h2>Portfolio</h2>
 <% @current_page.samples.each do |sample| %>
-<section class="sample">
-  <h3><%= sample.name %></h3>
-  <aside class="plastform"><strong>Platform:</strong> <%= sample.platform %></aside>
-  <% if sample.source_url %>
-  <aside class="source_url"><strong>Source:</strong> <a href="<%= sample.source_url %>"><%= sample.source_url %></a></aside>
-  <% end %>
-  <div class="description"><%=raw sample.description %></div>
-</section>
+  <div class="sample">
+    <h3><%= sample.name %></h3>
+    <aside class="plastform"><strong>Platform:</strong> <%= sample.platform %></aside>
+    <% if sample.source_url %>
+    <aside class="source_url"><strong>Source:</strong> <a href="<%= sample.source_url %>"><%= sample.source_url %></a></aside>
+    <% end %>
+    <div class="description"><%=raw sample.description %></div>
+  </div>
 <% end %>
+</section>
 
+<section class="tab-pane" id="work_history">
 <h2>Work History</h2>
 <% @current_page.work_histories.each do |work_history| %>
-<section class="work_history">
-  <h3><%= work_history.company %>&ndash;<%= work_history.position %></h3>
-  <aside class="dates"><span><%= work_history.start_date %></span> - <span><%= work_history.end_date %></span></aside>
-  <aside class="address"><%= work_history.address %></aside>
-  <% if work_history.contact_info %>
-  <div class="contact"><%=raw work_history.contact_info %></div>
-  <% end %>
-  <div class="description"><%=raw work_history.description %></div>
-</section>
+  <div class="work_history">
+    <h3><%= work_history.company %>&ndash;<%= work_history.position %></h3>
+    <aside class="dates"><span><%= work_history.start_date.strftime('%B %Y') %></span> - <% if work_history.end_date %><span><%= work_history.end_date.strftime('%B %Y') %></span><% end %></aside>
+    <aside class="address"><%= work_history.address %></aside>
+    <% if work_history.contact_info %>
+    <div class="contact"><%=raw work_history.contact_info %></div>
+    <% end %>
+    <div class="description"><%=raw work_history.description %></div>
+  </div>
 <% end %>
+</section>
+

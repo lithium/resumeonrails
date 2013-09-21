@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130920050137) do
+ActiveRecord::Schema.define(version: 20130921005307) do
 
   create_table "page_sample_associations", force: true do |t|
     t.integer  "page_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20130920050137) do
     t.text     "header"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "layout"
   end
 
   create_table "rails_admin_histories", force: true do |t|

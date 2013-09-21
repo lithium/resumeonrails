@@ -34,6 +34,7 @@ class Page < ActiveRecord::Base
     end
     edit do
       field :slug
+      field :layout
       field :header, :ck_editor
       field :skills
       field :samples

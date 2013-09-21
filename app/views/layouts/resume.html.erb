@@ -1,0 +1,22 @@
+
+
+<% content_for :content do %>
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="<%= @current_page.slug %>">Title</a>
+      <ul class="nav nav-tabs" id="#resume-nav">
+        <li class="active"><a href="#skillset" data-toggle="tab">Skills</a></li>
+        <li><a href="#portfolio" data-toggle="tab">Portfolio</a></li>
+        <li><a href="#work_history" data-toggle="tab">Work History</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid tab-content">
+      <%= yield %>
+  </div>
+  
+<% end %>
+
+<%= render template: "layouts/application" %>
