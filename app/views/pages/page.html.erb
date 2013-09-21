@@ -5,12 +5,36 @@
 
 <section class="tab-pane active" id="skillset">
   <h2>Skillset</h2>
-  <%= render partial: "skill", collection: @current_page.skills %>
+
+  <div class="row-fluid">
+    <div class="span2">
+      <ul class="nav nav-pills nav-stacked">
+        <% @current_page.skills.each_with_index do |skill, i| %>
+        <li class="<%= i == 0 ? 'active' : '' %>"><a href="#<%= skill.name %>"><%= skill.name %></a></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="span10">
+      <%= render partial: "skill", collection: @current_page.skills %>
+    </div>
+  </div>
+
 </section>
 
 <section class="tab-pane" id="portfolio">
   <h2>Portfolio</h2>
-  <%= render partial: "sample", collection: @current_page.samples %>
+  <div class="row-fluid">
+    <div class="span2">
+      <ul class="nav nav-pills nav-stacked">
+        <% @current_page.samples.each_with_index do |sample, i| %>
+        <li class="<%= i == 0 ? 'active' : '' %>"><a href="#<%= sample.name %>"><%= sample.name %></a></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="span10">
+      <%= render partial: "sample", collection: @current_page.samples %>
+    </div>
+  </div>
 </section>
 
 <section class="tab-pane" id="work_history">
