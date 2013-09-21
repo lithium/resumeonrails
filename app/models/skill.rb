@@ -4,8 +4,7 @@ class Skill < ActiveRecord::Base
 
   rails_admin do 
     edit do
-      field :name
-      field :description, :ck_editor
+      fields :name, :description
     end
 
     list do

@@ -16,15 +16,6 @@ class WorkHistory < ActiveRecord::Base
 
 
   rails_admin do 
-    edit do
-      field :company
-      field :position
-      field :start_date
-      field :end_date
-      field :address
-      field :contact_info
-      field :description, :ck_editor
-    end
     list do
       fields :company,:position,:start_date,:end_date
     end

@@ -12,33 +12,20 @@ class Page < ActiveRecord::Base
 
 
   rails_admin do 
-    configure :page_skill_associations do
-      visible(false)
-    end
     configure :skills do
       orderable(true)
     end
 
-    configure :page_sample_associations do
-      visible(false)
-    end
     configure :samples do
       orderable(true)
     end
 
-    configure :page_work_history_associations do
-      visible(false)
-    end
     configure :work_histories do
       orderable(false)
     end
+    
     edit do
-      field :slug
-      field :layout
-      field :header, :ck_editor
-      field :skills
-      field :samples
-      field :work_histories
+      fields :slug, :layout, :header, :skills, :samples, :work_histories
     end
 
     list do
