@@ -1,0 +1,9 @@
+  <div class="work_history">
+    <h3><%= work_history.company %>&ndash;<%= work_history.position %></h3>
+    <aside class="dates"><span><%= work_history.start_date.strftime('%B %Y') %></span> - <% if work_history.end_date %><span><%= work_history.end_date.strftime('%B %Y') %></span><% end %></aside>
+    <aside class="address"><%= work_history.address %></aside>
+    <% if work_history.contact_info %>
+    <div class="contact"><%=raw work_history.contact_info %></div>
+    <% end %>
+    <div class="description"><%=raw work_history.description %></div>
+  </div>

@@ -1,0 +1,8 @@
+  <div class="sample">
+    <h3><%= sample.name %></h3>
+    <aside class="plastform"><strong>Platform:</strong> <%= sample.platform %></aside>
+    <% if sample.source_url %>
+    <aside class="source_url"><strong>Source:</strong> <a href="<%= sample.source_url %>"><%= sample.source_url %></a></aside>
+    <% end %>
+    <div class="description"><%=raw sample.description %></div>
+  </div>
