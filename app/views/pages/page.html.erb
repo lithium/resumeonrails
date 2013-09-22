@@ -7,14 +7,14 @@
   <h2>Skillset</h2>
 
   <div class="row-fluid">
-    <div class="span2">
-      <ul class="nav nav-pills nav-stacked sidebar-nav">
+    <div class="span4">
+      <ul class="nav nav-pills nav-stacked sidebar-nav skills">
         <% @current_page.skills.each_with_index do |skill, i| %>
         <li class="<%= i == 0 ? 'active' : '' %>"><a href="#<%= skill.name %>"><%= skill.name %></a></li>
         <% end %>
       </ul>
     </div>
-    <div class="span10">
+    <div class="span8">
       <%= render partial: "skill", collection: @current_page.skills %>
     </div>
   </div>
@@ -25,7 +25,7 @@
   <h2>Portfolio</h2>
   <div class="row-fluid">
     <div class="span2">
-      <ul class="nav nav-pills nav-stacked sidebar-nav">
+      <ul class="nav nav-pills nav-stacked sidebar-nav samples">
         <% @current_page.samples.each_with_index do |sample, i| %>
         <li class="<%= i == 0 ? 'active' : '' %>"><a href="#<%= sample.name %>"><%= sample.name %></a></li>
         <% end %>

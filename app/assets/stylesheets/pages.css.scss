@@ -3,8 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.sidebar-nav.affix {
+.sidebar-nav.affix.samples {
   position: fixed;
   top: 60px;
   width: 14.89362%; // .span2
+}
+
+.sidebar-nav.affix.skills {
+  position: fixed;
+  top: 60px;
+  width: 31.91489%; // .span4
 }
