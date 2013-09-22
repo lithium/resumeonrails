@@ -4,7 +4,9 @@
 
   <div class="navbar navbar-fixed-top" >
     <div class="navbar-inner">
-      <a class="brand" href="<%= @current_page.slug %>">Title</a>
+      <% if @current_page.title && !@current_page.title.empty? %>
+      <a class="brand" href="<%= @current_page.slug %>"><%= @current_page.title %></a>
+      <% end %>
       <ul class="nav nav-tabs" id="#resume-nav">
         <li class="active"><a href="#skillset" data-toggle="tab">Skills</a></li>
         <li><a href="#portfolio" data-toggle="tab">Portfolio</a></li>

@@ -25,11 +25,11 @@ class Page < ActiveRecord::Base
     end
     
     edit do
-      fields :slug, :layout, :header, :skills, :samples, :work_histories
+      fields :slug, :title, :layout, :header, :skills, :samples, :work_histories
     end
 
     list do
-      fields :id,:slug
+      fields :slug, :title
     end
 
   end
