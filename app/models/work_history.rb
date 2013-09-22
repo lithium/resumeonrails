@@ -1,6 +1,6 @@
 class WorkHistory < ActiveRecord::Base
 
-  default_scope { order("start_date") }
+  default_scope { order("start_date DESC") }
 
   def name
     "#{position} - #{company}"
