@@ -54,6 +54,8 @@ gem "devise", "~> 3.0"
 # image uploads
 gem "paperclip", "~> 3.5.1"
 
+# markdown
+gem "redcarpet", "~> 3.0.0"
 
 # heroku
 gem 'rails_12factor', group: :production
