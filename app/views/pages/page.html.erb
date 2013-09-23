@@ -3,6 +3,8 @@
 
 <%=raw markdown(@current_page.header) %>
 
+
+<% if @current_page.skills.count > 0 %>
 <section class="tab-pane active" id="skillset">
   <h2>Skillset</h2>
 
@@ -18,9 +20,10 @@
       <%= render partial: "skill", collection: @current_page.skills %>
     </div>
   </div>
-
 </section>
+<% end %>
 
+<% if @current_page.samples.count > 0 %>
 <section class="tab-pane" id="portfolio">
   <h2>Portfolio</h2>
   <div class="row-fluid">
@@ -36,9 +39,12 @@
     </div>
   </div>
 </section>
+<% end %>
 
+<% if @current_page.work_histories.count > 0 %>
 <section class="tab-pane" id="work_history">
   <h2>Work History</h2>
   <%= render partial: "work_history", collection: @current_page.work_histories %>
 </section>
+<% end %>
 

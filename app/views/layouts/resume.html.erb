@@ -7,10 +7,16 @@
       <% if @current_page.title && !@current_page.title.empty? %>
       <a class="brand" href="<%= @current_page.slug %>"><%= @current_page.title %></a>
       <% end %>
-      <ul class="nav nav-tabs" id="#resume-nav">
-        <li class="active"><a href="#skillset" data-toggle="tab">Skills</a></li>
+      <ul class="nav nav-tabs">
+        <% if @current_page.skills.count > 0 %>
+        <li><a href="#skillset" data-toggle="tab">Skills</a></li>
+        <% end %>
+        <% if @current_page.samples.count > 0 %>
         <li><a href="#portfolio" data-toggle="tab">Portfolio</a></li>
+        <% end %>
+        <% if @current_page.work_histories.count > 0 %>
         <li><a href="#work_history" data-toggle="tab">Work History</a></li>
+        <% end %>
       </ul>
     </div>
   </div>

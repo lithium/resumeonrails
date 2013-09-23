@@ -11,6 +11,8 @@ $(function() {
 
   if (window.location.hash) {
     scroll_to_name(window.location.hash)
+  } else {
+    $('.navbar-fixed-top li:first a').tab('show');
   }
 
 })
