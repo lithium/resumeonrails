@@ -10,7 +10,7 @@ class WorkHistory < ActiveRecord::Base
   validate :start_date_cannot_overlap
 
   def start_date_cannot_overlap
-    overlapping = WorkHistory.where("start_date <= ? AND end_date >= ?", start_date, start_date)
+    overlapping = WorkHistory.where("id <> ? AND start_date <= ? AND end_date >= ?", id, start_date, start_date)
     errors.add(:start_date, "overlaps existing Work History") if overlapping.first
   end
 
