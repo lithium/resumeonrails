@@ -1,9 +1,9 @@
-  <div class="work_history">
-    <h3><%= work_history.company %>&ndash;<%= work_history.position %></h3>
+  <div class="resume-item work_history">
+    <h3><%= work_history.position %>&ndash;<%= work_history.company %></h3>
     <aside class="dates"><span><%= work_history.start_date.strftime('%B %Y') %></span> - <% if work_history.end_date %><span><%= work_history.end_date.strftime('%B %Y') %></span><% end %></aside>
     <aside class="address"><%=raw markdown(work_history.address) %></aside>
-    <% if work_history.contact_info  && !work_history.contact_info.empty?%>
-    <div class="contact"><%=raw markdown(work_history.contact_info) %></div>
+    <% if work_history.contact_info  && !work_history.contact_info.empty? %>
+    <aside class="contact"><%=raw markdown(work_history.contact_info) %></aside>
     <% end %>
     <div class="description"><%=raw markdown(work_history.description) %></div>
   </div>
