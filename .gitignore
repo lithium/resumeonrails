@@ -16,7 +16,7 @@
 /tmp
 
 # Ignore uploaded development media
-public/
+public/system
 
 # Ignore local heroku files
 .env
